@@ -1,5 +1,3 @@
-# QQ-consulting
-
 <html>
 <head>
 <title>QQ Consulting</title>
