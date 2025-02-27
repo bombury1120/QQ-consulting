@@ -1,1 +1,24 @@
 # QQ-consulting
+
+<html>
+<head>
+<title>QQ Consulting</title>
+<meta charset="utf-8">
+</head>
+   
+<body> 
+<h1><a href="https://www.instagram.com/hub_brain/" target="_blank" title="Visit our Instagram page">QQ Consulting</a></h1>
+ttm: 2/5 occupied
+<ol> 
+    <li><a href="약력.html">약력</a></li> 
+    <li><a href="규정.html">규정</a></li>
+    <li><a href="수강안내.html">수강안내</a></li>
+</ol>
+<pre>
+QQC(Quality than Quality consulting)는는 대형학원의 공장식 생기부, 학습코칭과는 반대의 가치를 지향합니다. 
+오직 5명의 학생에게만 밀착하여 수행평가, 세부능력특기사항, 보고서 및 연구, 입시 정책과 수시지원에 대한 A to Z를 모두 보조하며, 24시간 상호작용 서비스를 제공합니다.
+중학교 내신 석차 20%-> 자사고 상위 1%를 달성한 공부법부터, 경쟁률 40:1의 top 10 의과대학에 진학한 생기부의 모든 것에 대해 알려드립니다.
+네이버 블로그, 과거 합격자 생기부에 의존하는 outdated 컨설팅이 아닌, 연구자로서 연구실과 논문에서 얻는 모든 분야의 과학 지식을 교과과정과 수행평가에 녹아내는 로드맵을 제공합니다.
+</pre>
+</body>
+</html>
