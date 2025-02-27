@@ -1,6 +1,5 @@
 <html>
 <head>
-<title>QQ Consulting</title>
 <meta charset="utf-8">
 </head>
    
