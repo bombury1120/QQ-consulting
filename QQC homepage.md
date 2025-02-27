@@ -10,9 +10,9 @@
 <h1><a href="https://www.instagram.com/hub_brain/" target="_blank" title="Visit our Instagram page">QQ Consulting</a></h1>
 ttm: 2/5 occupied
 <ol> 
-    <li><a href="약력.html">약력</a></li> 
-    <li><a href="규정.html">규정</a></li>
-    <li><a href="수강안내.html">수강안내</a></li>
+    <li><a href="약력.md">약력</a></li> 
+    <li><a href="규정.md">규정</a></li>
+    <li><a href="수강안내.md">수강안내</a></li>
 </ol>
 <pre>
 QQC(Quality than Quality consulting)는는 대형학원의 공장식 생기부, 학습코칭과는 반대의 가치를 지향합니다. 
