@@ -44,6 +44,6 @@
         font-weight: bold;
     }
     a {
-        color: inherit; /* 부모 요소(body)의 color 속성을 따름 */
+        color: inherit; !important
     }
  </style>
