@@ -5,9 +5,25 @@
 </head>
 <body> 
 <h1><a href="index.html" title="Back to home">QQ Consulting</a></h1>
+<input type="button" value="night" onclick="
+var target = document.querySelector('body');
+var buttons = document.querySelectorAll('input[type=button]'); // 모든 버튼 가져오기
+
+if (this.value === 'night') {
+    target.style.backgroundColor = 'black';
+    target.style.color = 'white';
+    buttons.forEach(btn => btn.value = 'day'); // 모든 버튼의 value 변경
+} else {
+    target.style.backgroundColor = 'white';
+    target.style.color = 'black';
+    buttons.forEach(btn => btn.value = 'night'); // 모든 버튼의 value 변경
+}
+">
+
+
 <div id="grid">
    <ol id="목차"> 
-    <li><a href="약력.html">약력</a></li> 
+    <li><a href="약력.ht ml">약력</a></li> 
     <li><a href="규정.html">규정</a></li>
     <li><a href="수강안내.html">수강안내</a></li>
    </ol>
@@ -25,6 +41,21 @@
    </p>
    </div>
 </div>
+
+<input type="button" value="night" onclick="
+var target = document.querySelector('body');
+var buttons = document.querySelectorAll('input[type=button]'); // 모든 버튼 가져오기
+
+if (this.value === 'night') {
+    target.style.backgroundColor = 'black';//target 대신 buttons[0]
+    target.style.color = 'white';
+    buttons.forEach(btn => btn.value = 'day'); // 모든 버튼의 value 변경
+} else {
+    target.style.backgroundColor = 'white';
+    target.style.color = 'black';
+    buttons.forEach(btn => btn.value = 'night'); // 모든 버튼의 value 변경
+}
+">
 
 <!--Start of Tawk.to Script-->
 <script type="text/javascript">
