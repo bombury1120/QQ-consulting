@@ -12,7 +12,7 @@
        text-align: center; 
        border-bottom:1px solid gray;
        margin:0;
-       padding: 20px;
+       padding: 20px; 
     }
     #목차{
        border-right: 1px solid gray;
@@ -38,5 +38,12 @@
        h1 {
           border-bottom: none;
        }
+    }
+
+    #article a{
+        font-weight: bold;
+    }
+    a {
+        color: inherit; /* 부모 요소(body)의 color 속성을 따름 */
     }
  </style>
