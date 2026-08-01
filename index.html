@@ -7,48 +7,62 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1><a href="index.html" title="Back to home">QQ Consulting</a></h1>
-    <div class="header-actions">
-      <button class="theme-toggle" aria-pressed="false">night</button>
-    </div>
-  </header>
+  <div class="site-wrapper">
+    <aside class="sidebar" role="complementary">
+      <div class="profile">
+        <h1 class="site-title">QQ Consulting</h1>
+        <p class="tagline">Quality than Quality consulting</p>
+      </div>
 
-  <main id="grid" class="container">
-    <aside id="목차" aria-label="목차">
-      <ol>
-        <li><a href="약력.html">약력</a></li>
-        <li><a href="규정.html">규정</a></li>
-        <li><a href="수강안내.html">수강안내</a></li>
-      </ol>
+      <nav class="nav" aria-label="메인 네비게이션">
+        <ul>
+          <li><a href="index.html">홈</a></li>
+          <li><a href="약력.html">약력</a></li>
+          <li><a href="규정.html">규정</a></li>
+          <li><a href="수강안내.html">수강안내</a></li>
+        </ul>
+      </nav>
+
+      <div class="contact">
+        <h2>Contact</h2>
+        <p>전화: <a href="tel:01026691120">010-2669-1120</a></p>
+        <p>카카오톡: <a href="https://open.kakao.com/o/bombury1120" target="_blank" rel="noopener">bombury1120</a></p>
+      </div>
+
+      <div class="theme-area">
+        <button class="theme-toggle" aria-pressed="false">night</button>
+      </div>
     </aside>
 
-    <article id="article">
-      <h2>QQC(Quality than Quality consulting)</h2>
-      <p>
-        는 대형학원의 공장식 생기부, 학습코칭과는 반대의 가치를 지향합니다.
-        오직 5명의 학생에게만 밀착하여 수행평가, 세부능력특기사항, 보고서 및 연구,
-        입시 정책과 수시지원에 대한 A to Z를 모두 보조하며, 질 높은 24시[...] 
-      </p>
+    <main class="content" role="main">
+      <article>
+        <h2>QQC(Quality than Quality consulting)</h2>
+        <p>
+          QQ Consulting는 대형학원의 공장식 생기부, 학습코칭과는 반대의 가치를 지향합니다.
+          오직 5명의 학생에게만 밀착하여 수행평가, 세부능력특기사항, 보고서 및 연구,
+          입시 정책과 수시지원에 대한 A to Z를 모두 보조하며, 질 높은 컨설팅을 제공합니다.
+        </p>
 
-      <ul>
-         <li>중학교 20%-> 자사고 1%를 달성&대치 시대인재 조교의 공부법</li>
-         <li>경쟁률 40:1의 top 10 의과대학에 진학한 생기부</li>
-         <li>누적 개인지도 학생 40명 과학전문강사의 코칭</li>
-      </ul>
+        <ul>
+          <li>중학교 20% → 자사고 1%를 달성하는 조교의 공부법</li>
+          <li>경쟁률 40:1의 top10 의과대학에 진학한 생기부 가이드</li>
+          <li>누적 개인지도 학생 40명, 과학전문강사의 맞춤 코칭</li>
+        </ul>
 
-      <p>
-        네이버 블로그, 과거 합격자 생기부에 의존하는 outdated 컨설팅이 아닌,
-        연구자로서 연구실과 논문에서 얻는 모든 분야의 과학 지식을 교과과정과 [...]
-      </p>
-    </article>
-  </main>
+        <p>
+          네이버 블로그나 과거 합격자 생기부에 의존하는 outdated 컨설팅이 아닌,
+          연구자로서 연구실과 논문에서 얻은 과학 지식을 교과과정과 접목하여
+          학생 개인에게 최적화된 컨설팅을 제공합니다.
+        </p>
+      </article>
 
-  <footer class="container">
-    <button class="theme-toggle" aria-pressed="false">night</button>
-  </footer>
+      <footer class="site-footer">
+        <p>&copy; QQ Consulting</p>
+      </footer>
+    </main>
+  </div>
 
-  <!-- Tawk.to chat -->
+  <!-- Tawk.to chat (기존 유지) -->
   <script type="text/javascript">
     var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
     (function(){
@@ -67,8 +81,8 @@
       var STORAGE_KEY = 'qq_theme_isNight';
 
       function applyTheme(isNight){
-        if (isNight) document.body.classList.add('theme-night');
-        else document.body.classList.remove('theme-night');
+        if (isNight) document.documentElement.classList.add('theme-night');
+        else document.documentElement.classList.remove('theme-night');
         document.querySelectorAll('.theme-toggle').forEach(function(btn){
           btn.textContent = isNight ? 'day' : 'night';
           btn.setAttribute('aria-pressed', isNight ? 'true' : 'false');
@@ -77,20 +91,16 @@
 
       function saveTheme(isNight){
         try { localStorage.setItem(STORAGE_KEY, isNight ? '1' : '0'); }
-        catch(e){ /* 일부 브라우저/프라이빗 모드에서 실패할 수 있음 */ }
+        catch(e){ /* 일부 환경에서 실패할 수 있음 */ }
       }
 
       function loadTheme(){
-        try {
-          var v = localStorage.getItem(STORAGE_KEY);
-          return v === '1';
-        } catch(e){
-          return false;
-        }
+        try { return localStorage.getItem(STORAGE_KEY) === '1'; }
+        catch(e){ return false; }
       }
 
       function toggleTheme(){
-        var isNight = document.body.classList.toggle('theme-night');
+        var isNight = document.documentElement.classList.toggle('theme-night');
         applyTheme(isNight);
         saveTheme(isNight);
       }
