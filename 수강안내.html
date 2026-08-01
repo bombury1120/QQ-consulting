@@ -1,50 +1,66 @@
-<html>
+<!doctype html>
+<html lang="ko">
 <head>
-<meta charset="utf-8">
-<link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>수강안내 - QQ Consulting</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-   
-<body> 
-<h1><a href="index.html" title="Back to home">QQ Consulting </a></h1>
-<div id="grid">
-<ol id="목차"> 
-    <li><a href="약력.html">약력</a></li> 
-    <li><a href="규정.html">규정</a></li>
-    <li><a href="수강안내.html">수강안내</a></li>
-</ol>
-<div id="article">
-<h2>수강안내</h2>
-<h3>1.Point care</h3>
-point care는 1회만으로 성적과 생기부 전반에 대해 정성적, 정량적인 point를 선덕고 출신 컨설턴트와 함께 점검하는 수업입니다. 
-하위권부터 최상위권까지 모든 등급대 학생을 대상으로 하는 수업입니다.
-    <h4>제공 항목</h4>
-    1.입시 현황 설명<br>
-    2.지원가능 대학 진단<br>
-    3.생기부 전체 첨삭본 및 추천 주제 5개 제공<br>
-    4.로드맵 제시<br>
-    5.학습방법 점검 
+<body>
+  <div class="site-wrapper">
+    <aside class="sidebar" role="complementary">
+      <div class="profile">
+        <h1 class="site-title">QQ Consulting</h1>
+        <p class="tagline">Quality than Quality consulting</p>
+      </div>
 
-<h3>2.All care</h3>
-All care는 최소 수강단위가 1학기인 수업으로, 1.0~4.5등급 학생을 대상으로 합니다.<br>
-현재 혜X여자고등학교 전교 1등 학생과, 재x고등학교 전교 8등 학생을 지도중으로, 잔여 정원은 "3명"입니다.<br>
-<br>
-<a target:"Googleform">선착순 신청/대기: 클릭</a>
-</div>
-</div>
+      <nav class="nav" aria-label="메인 네비게이션">
+        <ul>
+          <li><a href="index.html">홈</a></li>
+          <li><a href="약력.html">약력</a></li>
+          <li><a href="규정.html">규정</a></li>
+          <li><a href="수강안내.html">수강안내</a></li>
+        </ul>
+      </nav>
 
-   <!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/67c0528694a82219125593c3/1il3k4o4i';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-<!--End of Tawk.to Script-->
+      <div class="contact">
+        <h2>Contact</h2>
+        <p>전화: <a href="tel:01026691120">010-2669-1120</a></p>
+        <p>카카오톡: <a href="https://open.kakao.com/o/bombury1120" target="_blank" rel="noopener">bombury1120</a></p>
+      </div>
+
+      <div class="theme-area">
+        <button class="theme-toggle" aria-pressed="false">night</button>
+      </div>
+    </aside>
+
+    <main class="content" role="main">
+      <article>
+        <h2>수강안내</h2>
+        <p>수강 관련 안내를 여기에 작성하세요. 예) 수업 방식, 비용, 일정, 준비물 등.</p>
+      </article>
+
+      <footer class="site-footer">
+        <p>&copy; QQ Consulting</p>
+      </footer>
+    </main>
+  </div>
+
+  <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];s1.async=true;s1.src='https://embed.tawk.to/67c0528694a82219125593c3/1il3k4o4i';s1.charset='UTF-8';s1.setAttribute('crossorigin','*');s0.parentNode.insertBefore(s1,s0);})();
+  </script>
+
+  <script>
+    (function(){
+      var STORAGE_KEY = 'qq_theme_isNight';
+      function applyTheme(isNight){ if (isNight) document.documentElement.classList.add('theme-night'); else document.documentElement.classList.remove('theme-night'); document.querySelectorAll('.theme-toggle').forEach(function(btn){ btn.textContent = isNight ? 'day' : 'night'; btn.setAttribute('aria-pressed', isNight ? 'true' : 'false'); }); }
+      function saveTheme(isNight){ try { localStorage.setItem(STORAGE_KEY, isNight ? '1' : '0'); } catch(e){ } }
+      function loadTheme(){ try { return localStorage.getItem(STORAGE_KEY) === '1'; } catch(e){ return false; } }
+      function toggleTheme(){ var isNight = document.documentElement.classList.toggle('theme-night'); applyTheme(isNight); saveTheme(isNight); }
+      document.querySelectorAll('.theme-toggle').forEach(function(btn){ btn.addEventListener('click', toggleTheme); });
+      applyTheme(loadTheme());
+    })();
+  </script>
 </body>
 </html>
-
